@@ -10,4 +10,6 @@ To run an example:
 $ yarn
 # For example: $ yarn ts-node src/flex-grow.tsx
 $ yarn ts-node src/<file name>
+# You can run an example in Ink debug mode, like so:
+$ DEBUG=true yarn ts-node src/<file name>
 ```

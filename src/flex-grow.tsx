@@ -6,9 +6,6 @@ import { render, Box, Color } from 'ink'
  *  STARTExample Step:[1/6]                                                      END
  * Expected:
  *  STARTExample Step:                                                      [1/6]END
- * 
- * Notes:
- *  Possible bug with flexGrow?
  */
 
 const Example: React.FC = () => {
@@ -26,4 +23,6 @@ const Example: React.FC = () => {
   )
 }
 
-render(<Example />)
+render(<Example />, {
+  debug: process.env.DEBUG === 'true'
+})
