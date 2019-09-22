@@ -3,9 +3,9 @@ import { render, Box, Color } from 'ink'
 
 /**
  * Output:
- *  Example Step:[1/6]
+ *  STARTExample Step:[1/6]                                                      END
  * Expected:
- *  Example Step:                [1/6]
+ *  STARTExample Step:                                                      [1/6]END
  * 
  * Notes:
  *  Possible bug with flexGrow?
@@ -14,12 +14,14 @@ import { render, Box, Color } from 'ink'
 const Example: React.FC = () => {
   return (
     <Box flexDirection='row' width={80}>
+      START
       <Box flexGrow={0}>
         <Color white>Example Step:</Color>
       </Box>
       <Box flexGrow={1} justifyContent='flex-end'>
         <Color grey>[1/6]</Color>
       </Box>
+      END
     </Box>
   )
 }
