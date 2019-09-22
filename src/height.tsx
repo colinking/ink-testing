@@ -55,7 +55,7 @@ async function run() {
   const { waitUntilExit } = render(<Example />, {
     debug: process.env.DEBUG === 'true',
     // @ts-ignore
-    experimental: true
+    experimental: false
   })
   await waitUntilExit()
 }
