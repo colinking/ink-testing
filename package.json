@@ -4,8 +4,11 @@
   "main": "index.js",
   "author": "Colin <me@colinking.co>",
   "license": "MIT",
+  "scripts": {
+    "build-ink": "cd node_modules/ink && npm i && npm run build"
+  },
   "dependencies": {
-    "ink": "^2.3.0",
+    "ink": "vadimdemedes/ink#experimental-reconciler",
     "react": "^16.9.0"
   },
   "devDependencies": {

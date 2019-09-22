@@ -7,9 +7,9 @@ This repo is meant to house examples of bugs reported to Ink.
 To run an example:
 
 ```sh
-$ yarn
-# For example: $ yarn ts-node src/flex-grow.tsx
-$ yarn ts-node src/<file name>
+$ npm i
+# For example: $ npx ts-node src/flex-grow.tsx
+$ npx ts-node src/<file name>
 # You can run an example in Ink debug mode, like so:
-$ DEBUG=true yarn ts-node src/<file name>
+$ DEBUG=true npx ts-node src/<file name>
 ```

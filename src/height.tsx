@@ -15,7 +15,6 @@ import { render, Box, Color } from 'ink'
  *  3
  *  4
  *  5
- *  
  */
 
 const Example: React.FC = () => {
@@ -24,9 +23,11 @@ const Example: React.FC = () => {
 
   // Fake loading some async data.
   useEffect(() => {
-    setTimeout(() => {
+    const t = setTimeout(() => {
       setIsLoading(false)
     }, 1000)
+
+    return () => clearTimeout(t)
   }, [])
 
   // Loading state if we're still waiting on the results
@@ -51,5 +52,7 @@ const Example: React.FC = () => {
 }
 
 render(<Example />, {
-  debug: process.env.DEBUG === 'true'
+  debug: process.env.DEBUG === 'true',
+  // @ts-ignore
+  experimental: true
 })
