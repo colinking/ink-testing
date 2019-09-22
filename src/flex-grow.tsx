@@ -2,6 +2,8 @@ import React from 'react'
 import { render, Box, Color } from 'ink'
 
 /**
+ * See: https://github.com/vadimdemedes/ink/issues/233
+ * 
  * Output:
  *  STARTExample Step:[1/6]                                                      END
  * Expected:
