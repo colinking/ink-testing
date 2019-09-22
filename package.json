@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "ink": "^2.3.0",
+    "ink-link": "^1.0.0",
     "react": "^16.9.0"
   },
   "devDependencies": {

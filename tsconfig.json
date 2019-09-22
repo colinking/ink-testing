@@ -11,13 +11,10 @@
     "baseUrl": ".",
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "jsx": "react",
-    "typeRoots": [
-      "./node_modules/@types",
-      "./src/@types"
-    ]
+    "jsx": "react"
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "ink-link.d.ts"
   ]
 }
