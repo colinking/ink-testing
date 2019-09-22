@@ -51,8 +51,13 @@ const Example: React.FC = () => {
   )
 }
 
-render(<Example />, {
-  debug: process.env.DEBUG === 'true',
-  // @ts-ignore
-  experimental: true
-})
+async function run() {
+  const { waitUntilExit } = render(<Example />, {
+    debug: process.env.DEBUG === 'true',
+    // @ts-ignore
+    experimental: true
+  })
+  await waitUntilExit()
+}
+
+run()
