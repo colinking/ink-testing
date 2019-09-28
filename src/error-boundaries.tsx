@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { render, Box, Color, useInput } from 'ink'
 
 /**
- * See: https://github.com/vadimdemedes/ink/issues/TODO
+ * See: https://github.com/vadimdemedes/ink/issues/234
  * 
  * Note: the output of this script depends on your terminal width. If you have enough space,
  * the ErrorBoundary (An error occurred: Whoops!) will overwrite the "React will try to..."
