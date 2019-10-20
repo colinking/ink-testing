@@ -14,6 +14,10 @@ import Analytics from 'analytics-node'
  *  [cli]: opening promise to send analytics
  *  [cli]: track call callback fired
  *  [cli]: promise awaited; closing
+ *
+ * Solution:
+ *  You need to `unmount()`, otherwise the node event loop will shut off. Ink should
+ *  maybe hang instead, so make these issues clear.
  */
 
 const Example: React.FC = () => {
@@ -21,10 +25,11 @@ const Example: React.FC = () => {
 }
 
 async function run() {
-  const { waitUntilExit } = render(<Example />, {
+  const { unmount } = render(<Example />, {
     debug: process.env.DEBUG === 'true'
   })
-  await waitUntilExit()
+  // This is the fix:
+  unmount()
 
   // Fire some analytics.
   const analyticsNode = new Analytics('123456789', {
