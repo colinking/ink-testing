@@ -8,7 +8,7 @@
     "build-ink": "cd node_modules/ink && npm i && npm run build"
   },
   "dependencies": {
-    "analytics-node": "^3.4.0-beta.1",
+    "analytics-node": "^3.5.0",
     "ink": "^2.4.0",
     "ink-link": "^1.0.0",
     "react": "^16.9.0"
